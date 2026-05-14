@@ -12,7 +12,7 @@ public class ConfigReader {
         try
 
     {
-        FileInputStream fis = new FileInputStream("C:\\Users\\aishw\\Purushoth projects\\Selenium Java Basics\\src\\test\\resources\\globalProps.properties");
+        FileInputStream fis = new FileInputStream("C:\\Users\\aishw\\PurushothProjects\\selenium-voter-automation\\src\\test\\resources\\globalProps.properties");
         prop = new Properties();
         prop.load(fis);
     } catch(
