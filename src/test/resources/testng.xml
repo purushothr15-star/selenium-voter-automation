@@ -4,7 +4,8 @@
         <classes>
             <class name="LogInElectorRole">
                 <methods>
-                    <include name="fetchDetails"/>
+                    <!--<include name="fetchDetails"/>-->
+                    <include name="enterDetails"/>
                 </methods>
             </class>
         </classes>

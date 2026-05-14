@@ -25,5 +25,15 @@ public class LogInElectorRole extends BaseTest{
 
     }
 
+    @Test
+    public void enterDetails() throws IOException {
+        reUseMethods.waitUntilElementIsDiplayed(Locators.epicID, 3);
+        String epicID = ExcelUtils.getData("Voter ID");
+        reUseMethods.enterTextInputBox(Locators.epicID, epicID);
+        //reUseMethods.clickOnELement(Locators.stateDrpDwn);
+        reUseMethods.selectFromDropDown(Locators.stateDrpDwn, ConfigReader.get("state"));
+        System.out.println("Values entered as expected");
+    }
+
 
 }
