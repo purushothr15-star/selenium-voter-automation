@@ -86,8 +86,14 @@ public class ExcelUtils {
     public static String getData(String columnName) throws IOException {
         String  text= null;
         try {
-            fis = new FileInputStream(file);
-            workbook = new XSSFWorkbook(fis);
+            InputStream fi = ExcelUtils.class
+                    .getClassLoader()
+                    .getResourceAsStream("voterData.xlsx");
+
+            if (fi == null) {
+                throw new RuntimeException("voterData.xlsx not found");
+            }
+            workbook = new XSSFWorkbook(fi);
             Sheet sheet = workbook.getSheet("Voter Details");
             Row getRow = sheet.getRow(sheet.getLastRowNum());
             Row headerRow   = sheet.getRow(0);
