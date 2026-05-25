@@ -21,6 +21,7 @@ public class ReUsableMethods {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(waitTime));
         wait.until(ExpectedConditions.visibilityOfElementLocated(element));
 
+
     }
     public boolean checkEleDisplayed(By element, int waitTime) {
 
