@@ -6,6 +6,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utils.ConfigReader;
 import utils.ExcelUtils;
+import utils.ReportLogger;
 
 import java.io.IOException;
 import java.time.Duration;
@@ -40,7 +41,10 @@ public class ReUsableMethods {
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(3));
         wait.until(ExpectedConditions.elementToBeClickable(element));
         Select select = new Select(driver.findElement(Locators.stateDrpDwn));
-        select.selectByVisibleText(ConfigReader.get("state"));
+        String state = ConfigReader.get("state");
+        select.selectByVisibleText(state);
+
+        ReportLogger.log("SelectValueFromStateDropdown", "Value selected", state);
     }
 
 
@@ -49,9 +53,12 @@ public class ReUsableMethods {
     public void clickOnELement(By element){
         waitUntilElementIsDiplayed(element, 4);
         driver.findElement(element).click();
+        ReportLogger.log("ClickOn"+element.toString(), "Clicked on"+element.toString(), "Clicking");
     }
     public void enterTextInputBox(By element, String value){
+
         driver.findElement(element).sendKeys(value);
+        ReportLogger.log("EnterValue", "Entered value in"+element.toString(), value);
     }
     public void getVoterDetails() throws IOException {
         waitUntilElementIsDiplayed(Locators.epicID, 3);

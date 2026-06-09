@@ -1,3 +1,4 @@
+import base.BaseTest;
 import org.openqa.selenium.By;
 
 public class Locators extends BaseTest {

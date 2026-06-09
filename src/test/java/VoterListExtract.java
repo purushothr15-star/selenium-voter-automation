@@ -1,13 +1,8 @@
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import base.BaseTest;
 import org.testng.annotations.Test;
-import utils.ConfigReader;
 import utils.ExcelUtils;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class VoterListExtract extends BaseTest{
+public class VoterListExtract extends BaseTest {
 
     LogInElectorRole ler = new LogInElectorRole();
     @Test

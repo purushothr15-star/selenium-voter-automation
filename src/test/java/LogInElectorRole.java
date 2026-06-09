@@ -1,3 +1,4 @@
+import base.BaseTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import utils.ConfigReader;
@@ -5,7 +6,7 @@ import utils.ExcelUtils;
 
 import java.io.IOException;
 
-public class LogInElectorRole extends BaseTest{
+public class LogInElectorRole extends BaseTest {
 
         ReUsableMethods reUseMethods;
        @BeforeMethod()
