@@ -60,6 +60,7 @@ public class ReUsableMethods {
         driver.findElement(element).sendKeys(value);
         ReportLogger.log("EnterValue", "Entered value in"+element.toString(), value);
     }
+    //test
     public void getVoterDetails() throws IOException {
         waitUntilElementIsDiplayed(Locators.epicID, 3);
         String epicID = ExcelUtils.getData("Voter ID");
