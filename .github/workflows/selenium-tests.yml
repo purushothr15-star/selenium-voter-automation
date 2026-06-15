@@ -10,9 +10,7 @@ on:
       - main
 
   schedule:
-    - cron: '0 */4 * * *'
-
-
+    - cron: '30 0 * * *'
 jobs:
   test:
 
